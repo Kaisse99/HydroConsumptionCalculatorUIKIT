@@ -84,6 +84,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func CalculateButton(_ sender: Any) {
+        onPeakUse = Double(OnPeakField.text ?? "0")
+        offPeakUse = Double(OffPeakField.text ?? "0")
+        midPeakUse = Double(MidPeakField.text ?? "0")
+        
+        OnPeakChargeField.text = "\(onPeakUse ?? 0)"
+        OffPeakChargeField.text = "\(offPeakUse ?? 0)"
     }
     
 }

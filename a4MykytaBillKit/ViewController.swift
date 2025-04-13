@@ -8,10 +8,64 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var OnPeakField: UITextField!
+    
+    @IBOutlet weak var OffPeakField: UITextField!
+    
+    @IBOutlet weak var MidPeakField: UITextField!
+    
+    
+    var onPeakUse: Double?
+    var offPeakUse: Double?
+    var midPeakUse: Double?
+    
+    var onPeakCharge : Double {
+        return (onPeakUse ?? 0) * onPeakRate
+    }
+    var offPeakCharge : Double {
+        return (offPeakUse ?? 0) * offPeakRate
+    }
+    
+    var midPeakCharge : Double {
+        return (midPeakUse ?? 0) * midPeakRate
+    }
+    
+    var totalConsumptionCharges : Double {
+        return onPeakCharge + offPeakCharge + midPeakCharge
+    }
+    
+    var hstCharge : Double {
+        return totalConsumptionCharges * hstRate
+    }
+    
+    var rebateDiscount : Double {
+        return totalConsumptionCharges * rebateRate
+    }
+    
+    var totalRegulatoryCharges : Double {
+        return hstCharge - rebateDiscount
+    }
+    
+    var netBillAmount : Double {
+        return totalConsumptionCharges + totalRegulatoryCharges
+    }
+    
+    
+    
+    final var onPeakRate : Double = 0.132
+    final var offPeakRate : Double = 0.065
+    final var midPeakRate : Double = 0.094
+    final var hstRate : Double = 0.13
+    final var rebateRate : Double = 0.08
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 

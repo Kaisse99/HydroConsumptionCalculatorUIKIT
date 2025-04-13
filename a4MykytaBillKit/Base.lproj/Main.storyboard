@@ -38,6 +38,9 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="CalculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QRF-SN-fhq"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter On-Peak Usage in kWh" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Uu6-dm-EuH">
                                 <rect key="frame" x="32" y="139" width="329" height="34"/>
@@ -154,9 +157,17 @@
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="HSTChargeField" destination="2Ha-wr-HjM" id="QMH-ll-MAn"/>
+                        <outlet property="MidPeakChargeField" destination="Jxv-dR-DgA" id="tTg-Er-VJ2"/>
                         <outlet property="MidPeakField" destination="nxT-Sg-k2W" id="Jzt-s6-A8I"/>
+                        <outlet property="NetBillAmountField" destination="Fd0-Iw-EnD" id="cUT-4P-8gO"/>
+                        <outlet property="OffPeakChargeField" destination="Lz4-ab-ucp" id="tnx-gT-UE7"/>
                         <outlet property="OffPeakField" destination="DsO-P7-6mW" id="kBb-ET-OAd"/>
+                        <outlet property="OnPeakChargeField" destination="isW-Dx-oqb" id="RUf-JN-XlB"/>
                         <outlet property="OnPeakField" destination="Uu6-dm-EuH" id="1En-L8-E0T"/>
+                        <outlet property="RebateField" destination="k4s-yE-H4L" id="xb3-uv-LDd"/>
+                        <outlet property="TotalConsumptionChargeField" destination="SxI-oO-taw" id="09a-yG-zht"/>
+                        <outlet property="TotalRegulatoryChargesField" destination="RVs-NF-Poa" id="gJe-Q3-obJ"/>
                         <outlet property="nameLabel" destination="Otw-aT-C8T" id="Qwd-Yz-Hpp"/>
                     </connections>
                 </viewController>

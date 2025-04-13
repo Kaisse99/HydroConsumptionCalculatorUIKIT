@@ -16,6 +16,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var MidPeakField: UITextField!
     
+    @IBOutlet weak var OnPeakChargeField: UILabel!
+    
+    @IBOutlet weak var OffPeakChargeField: UILabel!
+    
+    @IBOutlet weak var MidPeakChargeField: UILabel!
+    
+    @IBOutlet weak var TotalConsumptionChargeField: UILabel!
+    
+    @IBOutlet weak var HSTChargeField: UILabel!
+    
+    @IBOutlet weak var RebateField: UILabel!
+    
+    @IBOutlet weak var TotalRegulatoryChargesField: UILabel!
+    
+    @IBOutlet weak var NetBillAmountField: UILabel!
     
     var onPeakUse: Double?
     var offPeakUse: Double?
@@ -68,6 +83,8 @@ class ViewController: UIViewController {
         
     }
 
-
+    @IBAction func CalculateButton(_ sender: Any) {
+    }
+    
 }
 

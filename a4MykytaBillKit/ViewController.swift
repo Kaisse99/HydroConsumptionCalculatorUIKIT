@@ -88,8 +88,18 @@ class ViewController: UIViewController {
         offPeakUse = Double(OffPeakField.text ?? "0")
         midPeakUse = Double(MidPeakField.text ?? "0")
         
-        OnPeakChargeField.text = "\(onPeakUse ?? 0)"
-        OffPeakChargeField.text = "\(offPeakUse ?? 0)"
+        
+        OnPeakChargeField.text = String(format: "On-Peak Charges $%.2f", onPeakCharge)
+        OffPeakChargeField.text = String(format: "Off-Peak Charges: $%.2f", offPeakCharge)
+        MidPeakChargeField.text = String(format: "Mid-Peak Charges: $%.2f", midPeakCharge)
+        
+        TotalConsumptionChargeField.text = String(format: "Total Consumption Charges: $%.2f", totalConsumptionCharges    )
+        HSTChargeField.text = String(format: "HST (13%): $%.2f", hstCharge)
+        RebateField.text = String(format: "Provincial Rebate (13%)%: $%.2f", rebateDiscount)
+        
+        TotalRegulatoryChargesField.text = String(format: "Total Regulatory Charges: $%.2f", totalRegulatoryCharges)
+        
+        NetBillAmountField.text = String(format: "Net Bill Amount: $%.2f", netBillAmount)
     }
     
 }
